@@ -25,3 +25,7 @@ gem 'net-pop', require: false
 bundle install --without production
 bundle update
 #git add. git commitする
+
+heroku addons:create sendgrid:starter
+heroku config:set SENDGRID_USERNAME=apikey
+heroku config:set SENDGRID_PASSWORD="API KEY"
