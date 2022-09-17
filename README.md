@@ -29,3 +29,16 @@ bundle update
 heroku addons:create sendgrid:starter
 heroku config:set SENDGRID_USERNAME=apikey
 heroku config:set SENDGRID_PASSWORD="API KEY"
+
+ <!-- devise install -->
+ https://github.com/heartcombo/devise
+bundle install --without production
+rails generate devise:install
+rails generate devise User
+rails db:migrate
+ <!-- bootstrap install -->
+https://www.mashrurhossain.com/blog/rails6bootstrap4
+yarn add bootstrap@4.3.1 jquery popper.js
+https://github.com/hisea/devise-bootstrap-views
+bundle install
+rails generate devise:views:bootstrap_templates
